@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <title>HTML5 Game</title>
+    <script src="lib/phaser.min.js"></script>
+    <script src="lib/hammer.min.js"></script>
+    <script src="game/js/Configuration.js"></script>
+    <script src="game/js/Disc.js"></script>
+    <script src="game/js/MessageScreen.js"></script>
+    <script src="game/js/PlayerDisc.js"></script>
+    <script src="game/js/TrailManager.js"></script>
+    <script src="game/js/Trail.js"></script>
+    <script src="game/js/Grid.js"></script>
+    <script src="game/js/Collect.js"></script>
+    <script src="game/js/CollectManager.js"></script>
+    <script src="game/js/DiscManager.js"></script>
+    <script src="game/js/DiscLoop.js"></script>
+    <script src="game/js/Crash.js"></script>
+    <script src="game/js/BackgroundGradient.js"></script>
+    <script src="game/js/Score.js"></script>
+    <script src="game/js/Nimble.js"></script>
+    <script src="game/js/CollectActions.js"></script>
+    <script src="game/js/states/Boot.js"></script>
+    <script src="game/js/states/Preloader.js"></script>
+    <script src="game/js/states/Menu.js"></script>
+    <script src="game/js/states/Game.js"></script>
+    <script src="lib/cordova.js"></script>
+</head>
+<body>
+<script>
+    function boot() {
+        var game = new Phaser.Game(1242, 2208, Phaser.AUTO, '');
+        game.state.add('boot', Main.Boot, true);
+        game.state.add('preloader', Main.Preloader);
+        game.state.add('menu', Main.Menu);
+        game.state.add('game', Main.Game);
+    }
+
+    window.onload = function () {
+        boot();
+    }
+</script>
+</body>
+</html>
