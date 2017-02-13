@@ -1662,7 +1662,6 @@ input[type="radio"] + label:before {
 
 /* Image */
 .image {
-  border-radius: 5px;
   border: 0;
   display: inline-block;
   position: relative; }
@@ -2518,13 +2517,12 @@ body.is-menu-visible #menu {
       -ms-flex-direction: row;
       flex-direction: row; }
     .wrapper.spotlight .image {
-      border-radius: 100%;
       margin: 0 3em 2em 0;
       width: 22em;
       overflow: hidden;
       -ms-flex: 1; }
       .wrapper.spotlight .image img {
-        border-radius: 100%;
+        border-radius: 10%;
         width: 100%; }
     .wrapper.spotlight .content {
       width: 100%;
